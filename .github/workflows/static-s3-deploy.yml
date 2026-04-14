@@ -12,3 +12,8 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCES_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCES_KEY }}
           aws-region: us-east-1
+      - name: Code satic code to S3
+        run: |
+          aws s3 sync ./s3://githubactions-static-website-demo/
+          -- exclude "*"\
+          -- include "index.html"
