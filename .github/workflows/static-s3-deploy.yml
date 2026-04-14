@@ -14,6 +14,6 @@ jobs:
           aws-region: us-east-1
       - name: Code satic code to S3
         run: |
-          aws s3 sync ./s3://githubactions-static-website-demo/ \
+          aws s3 sync . s3://githubactions-static-website-demo/ \
           --exclude "*" \
           --include "index.html"
