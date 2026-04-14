@@ -1,19 +1,107 @@
-
- /* We are using the 'Roboto' font from Google. This has already been added to your HTML header */
-
-body {
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/**
- * Add your custom styles below
- * 
- * Remember: 
- * - Be organised, use comments and separate your styles into meaningful chunks
- *    for example: General styles, Navigation styles, Hero styles, Footer etc.
- * 
- * - When using Flexbox, remember the items you want to move around need to be inside a parent container set to 'display: flex'
- */
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
 
+.navbar li {
+    cursor: pointer;
+    color: #555;
+}
+
+.navbar .active {
+    color: #ff6a00;
+}
+
+.logo {
+    font-weight: bold;
+    color: #ff6a00;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    margin-bottom: 20px;
+}
+
+.overlay button {
+    padding: 10px 20px;
+    border: none;
+    background: #ff6a00;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* FEATURES */
+.features {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.features h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.feature img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+
+.social span {
+    margin: 0 10px;
+    font-size: 20px;
+}
