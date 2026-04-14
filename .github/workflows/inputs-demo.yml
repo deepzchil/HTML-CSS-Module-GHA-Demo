@@ -6,12 +6,13 @@ on:
        description: Choose the enviromnet to deploy
        required: true
        default: dev
+       type: choice
        options:
          - dev
          - test
          - prod
       artifact_tag:
-        description: Chose the git tag to deploy
+        description: Choose the git tag to deploy
         required: true
 jobs:
   input-demo:
